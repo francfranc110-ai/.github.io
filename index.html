@@ -3,66 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DashFix | Device Repair</title>
+    <title>DashFix | Device Repair Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #fcfcfc; color: #1a1a1a; scroll-behavior: smooth; }
         .hero-border { border: 1px solid #1a1a1a; }
-        .nav-link:hover { text-decoration: line-through; }
+        .nav-link { position: relative; transition: all 0.3s ease; }
+        .nav-link:hover { opacity: 0.6; }
+        section { min-height: 80vh; display: flex; flex-direction: column; justify-content: center; }
     </style>
 </head>
 <body class="p-6 md:p-12">
 
-    <nav class="flex justify-between items-center mb-24 fixed top-0 left-0 w-full p-6 md:p-12 bg-white/80 backdrop-blur-md z-50">
-        <div class="text-xl font-semibold tracking-tighter">DASHFIX.</div>
-        <div class="space-x-8 text-xs uppercase tracking-widest">
+    <nav class="flex justify-between items-center fixed top-0 left-0 w-full p-6 md:p-12 bg-white/90 backdrop-blur-sm z-50 border-b border-zinc-100">
+        <div class="text-xl font-semibold tracking-tighter uppercase">DASHFIX.</div>
+        <div class="space-x-8 text-[10px] uppercase tracking-widest font-medium">
             <a href="#appointments" class="nav-link">Appointments</a>
-            <a href="#mail-in" class="nav-link">Mail-In</a>
+            <a href="#mail-in" class="nav-link">Mail-In Repair</a>
         </div>
     </nav>
 
-    <main class="max-w-6xl mx-auto mt-32">
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-32">
-            <div>
-                <h1 class="text-6xl md:text-8xl font-light leading-tight tracking-tighter mb-8">
-                    Expert <br> Repairs.
-                </h1>
-                <p class="text-lg text-gray-500 max-w-sm">
-                    Fast turnaround for TikTok creators and local clients. Select your service type below.
-                </p>
-            </div>
-            <div class="hero-border h-64 flex items-center justify-center italic text-gray-400">
-                DashFix Service Hub
-            </div>
-        </section>
-
-        <section id="appointments" class="py-20 border-t border-black">
-            <div class="flex flex-col md:flex-row justify-between mb-12">
-                <h2 class="text-3xl font-light tracking-tight">Local Appointments</h2>
-                <p class="text-sm text-gray-400 uppercase tracking-widest mt-4 md:mt-0">Houston, TX</p>
-            </div>
-            <div class="hero-border p-1 bg-white">
-                <iframe src="YOUR_CALENDLY_LINK_HERE" width="100%" height="600" frameborder="0"></iframe>
+    <main class="max-w-6xl mx-auto">
+        
+        <section id="home">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-6xl md:text-8xl font-light leading-tight tracking-tighter mb-8">
+                        Precision <br> Repair.
+                    </h1>
+                    <p class="text-lg text-gray-500 max-w-sm mb-8">
+                        Specialized device restoration for the digital age. Fast, transparent, and reliable.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#appointments" class="hero-border px-6 py-3 text-[10px] uppercase tracking-widest hover:bg-black hover:text-white transition">Book Local</a>
+                        <a href="#mail-in" class="hero-border px-6 py-3 text-[10px] uppercase tracking-widest hover:bg-black hover:text-white transition">Ship Device</a>
+                    </div>
+                </div>
+                <div class="hero-border aspect-square bg-zinc-50 flex items-center justify-center italic text-zinc-300 text-sm tracking-widest uppercase">
+                    Dashfix Studio
+                </div>
             </div>
         </section>
 
-        <section id="mail-in" class="py-20 border-t border-black mt-20">
-            <div class="flex flex-col md:flex-row justify-between mb-12">
-                <h2 class="text-3xl font-light tracking-tight">Mail-In Repair Form</h2>
-                <p class="text-sm text-gray-400 uppercase tracking-widest mt-4 md:mt-0">Nationwide Shipping</p>
-            </div>
-            <div class="hero-border p-8 bg-zinc-50 text-center">
-                <p class="mb-8 text-gray-600">Please fill out our intake form before shipping your device.</p>
-                <a href="YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" class="inline-block hero-border px-12 py-4 uppercase text-xs tracking-widest hover:bg-black hover:text-white transition">
-                    Open Intake Form
-                </a>
+        <section id="appointments" class="border-t border-black">
+            <div class="py-12">
+                <h2 class="text-xs uppercase tracking-[0.3em] text-zinc-400 mb-4">Service Type: 01</h2>
+                <h3 class="text-4xl font-light tracking-tight mb-12">Local Appointments</h3>
+                <div class="hero-border bg-white overflow-hidden">
+                    <iframe src="https://calendly.com/francfranc110/30min" width="100%" height="700" frameborder="0"></iframe>
+                </div>
             </div>
         </section>
+
+        <section id="mail-in" class="border-t border-black">
+            <div class="py-12">
+                <h2 class="text-xs uppercase tracking-[0.3em] text-zinc-400 mb-4">Service Type: 02</h2>
+                <h3 class="text-4xl font-light tracking-tight mb-8">Mail-In Repair</h3>
+                <div class="hero-border p-12 md:p-24 bg-zinc-900 text-white text-center">
+                    <p class="text-xl font-light mb-12 text-zinc-400">Can't make it to us? We accept mail-ins from all 50 states.</p>
+                    <a href="https://forms.gle/Kr5pKdkhpRMzYYdB7" target="_blank" class="border border-white px-12 py-5 uppercase text-[10px] tracking-[0.2em] hover:bg-white hover:text-black transition">
+                        Start Intake Form
+                    </a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer class="mt-48 pb-12 text-center text-[10px] uppercase tracking-[0.3em] text-gray-400">
-        &copy; 2026 DASHFIX &bull; All Rights Reserved
+    <footer class="py-12 text-center text-[10px] uppercase tracking-[0.4em] text-zinc-400">
+        &copy; 2026 DASHFIX &bull; Houston, Texas
     </footer>
 
 </body>
